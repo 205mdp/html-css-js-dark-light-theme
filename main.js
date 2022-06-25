@@ -41,10 +41,11 @@ const detectColorScheme = () => {
   }
 }
 
-detectColorScheme();
+
 // Verifica si hay cambios en el thema y lo cambia
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
   event.matches ? enableDarkMode() : disableDarkMode();
 });
 
 // Detectar el color del sistema
+detectColorScheme();
