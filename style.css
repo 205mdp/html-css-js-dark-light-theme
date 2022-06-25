@@ -6,7 +6,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  
+
 }
 
 /* variables globales */
@@ -17,6 +17,8 @@
   --main-color: #333;
   --header-container-max-width: 70rem;
 }
+
+
 
 /* media query dark  */
 @media (prefers-color-scheme: dark) {
@@ -29,6 +31,22 @@
     --main-color: rgb(235, 235, 235);
     --header-container-max-width: 70rem;
   }
+}
+
+.darkmode {
+  --header-color: #b2b2b2;
+  --header-back-color: rgb(31, 31, 31);
+  --main-back-color: #595959;
+  --main-color: rgb(235, 235, 235);
+  --header-container-max-width: 70rem;
+}
+
+.lightmode {
+  --header-color: #f5f5f5;
+  --header-back-color: rgb(84, 121, 241);
+  --main-back-color: #f5f5f5;
+  --main-color: #333;
+  --header-container-max-width: 70rem;
 }
 
 a,
