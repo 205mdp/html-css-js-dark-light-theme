@@ -1,8 +1,84 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+/* RESET  */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* variables globales */
+:root {
+  --header-color: #f5f5f5;
+  --header-back-color: rgb(84, 121, 241);
+  --main-back-color: #f5f5f5;
+  --main-color: #333;
+  --header-container-max-width: 70rem;
+}
+
+/* media query dark  */
+@media (prefers-color-scheme: dark) {
+
+  /* viriables globales dark theme  */
+  :root {
+    --header-color: #b2b2b2;
+    --header-back-color: rgb(31, 31, 31);
+    --main-back-color: #595959;
+    --main-color: rgb(235, 235, 235);
+    --header-container-max-width: 70rem;
+  }
+}
+
+a,
+a :link,
+a :visited {
+  text-decoration: none;
+  color: var(--header-color);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--main-back-color);
+  color: var(--main-color);
+}
+
+header {
+  background-color: var(--header-back-color);
+  color: var(--header-color);
+  height: 3rem;
+  width: 100%;
+}
+
+/* header y menu nada relacionado a dark light  */
+section,
+.header-container {
+  max-width: var(--header-container-max-width);
+  /* center */
+  margin: 0 auto;
+  height: 100%;
+}
+
+.header-container,
+.header-container ul {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container li {
+  margin-right: 1em;
+}
+
+.header-container li:last-child {
+  margin-right: 0;
+}
+
+.btn-theme {
+  cursor: pointer;
+  margin-right: 1em;
 }
