@@ -60,7 +60,6 @@ Se puede hacer agregando una clase al body .dark , .light lo guardamos en el loc
 ```js
 // cambio de dark mode a ligh mode. 
 const enableDarkMode = () => {
-  document.body.classList.remove('lightmode');
   document.body.classList.add('darkmode');
   // 2. Update darkMode in localStorage
   localStorage.setItem('theme', 'dark');
@@ -69,7 +68,6 @@ const enableDarkMode = () => {
 const disableDarkMode = () => {
   // 1. Remove the class from the body
   document.body.classList.remove('darkmode');
-  document.body.classList.add('lightmode');
   // 2. Update darkMode in localStorage 
   localStorage.setItem('theme', 'light');
 }
