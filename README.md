@@ -2,7 +2,7 @@
 
 
 # Instalación 
-### Se puede ejecutar desde cualquier server virtual que tengas, no es neceario al 100% 
+### Se puede ejecutar desde cualquier server virtual que tengas, no es necesario al 100% 
 
 
 > Primero clonar el repositorio.
@@ -40,7 +40,7 @@ yarn dev
 
 # Opción 2 Con Javascript y media query
 
-## Detectamos que configurción tiene el sistema. 
+## Detectamos que configuración tiene el sistema. 
 ```js
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     // dark mode
@@ -56,9 +56,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 });
 ```
 
-# Opción 3 Con Javascript manualmente por boton.
+# Opción 3 Con Javascript manualmente por botón.
 
-Se puede hacer agregando una clase al body .dark , .light lo guardamos en el localStorage tambien. 
+Se puede hacer agregando una clase al body .dark , .light lo guardamos en el localStorage también. 
 
 ```js
 // cambio de dark mode a ligh mode. 
@@ -94,7 +94,7 @@ btnTheme.addEventListener('click', () => {
 
 - Se elimina la clase .lightmode y se saca el @media (prefers-color-scheme: dark) se realiza todo con Javascript y se almacena en el LocalStorage. 
 
-- De css solo nos queda las variables en el root y en la clase .darkmode, la clase .darkmode se asigna al body y se remueve cuando esta en modo light quedando aplicadas las variables del root base. 
+- De css solo nos queda las variables en el root y en la clase .darkmode, la clase .darkmode se asigna al body y se remueve cuando está en modo light quedando aplicadas las variables del root base. 
 
 ```css
 /* variables globales */
@@ -115,7 +115,7 @@ btnTheme.addEventListener('click', () => {
 }
 ```
 
-- Cuando carga la pagina verificamos que thema esta en el sistema y que theme en el local host. Deja el que se encuentre en el Localhost. 
+- Cuando carga la página verificamos que thema esta en el sistema y que theme en el local host. Deja el que se encuentre en el Localhost. 
 
 ```js
 // Detectar el color del sistema
@@ -168,7 +168,7 @@ const disableDarkMode = () => {
 
 ```
 
-> Nota final: Uds podrian agregar mas themas de colores o dejar que el cliente seleciones los colores y los guarde en el localstorage o en la base de datos. 
+> Nota final: Uds podrían agregar mas temas de colores o dejar que el cliente selecciones los colores y los guarde en el localstorage o en la base de datos. 
 
 <hr>
 
