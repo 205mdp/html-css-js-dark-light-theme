@@ -4,7 +4,6 @@
 # Instalación 
 > Se puede ejecutar desde cualquier server virtual que tengas, no es neceario al 100% 
 
-
 ```js
 yarn add 
 ```
