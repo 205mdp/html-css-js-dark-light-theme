@@ -2,7 +2,10 @@
 
 
 # Instalación 
-> Se puede ejecutar desde cualquier server virtual que tengas, no es neceario al 100% 
+### Se puede ejecutar desde cualquier server virtual que tengas, no es neceario al 100% 
+
+
+> Primero clonar el repositorio.
 
 ```js
 yarn add 
@@ -13,7 +16,7 @@ yarn add
 yarn dev
 ```
 
-# Solo css 
+# Opción 1 - Solo css 
 
 - Generar variables que se asignaran a los background y colors. 
 - Generar media query.
@@ -35,9 +38,9 @@ yarn dev
 
 - Conclusión: con este simple paso toma el theme del navegador y lo aplica en la página.
 
-# Con Javascript 
+# Opción 2 Con Javascript y media query
 
--Detectamos que configurción tiene el sistema. 
+## Detectamos que configurción tiene el sistema. 
 ```js
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     // dark mode
@@ -46,14 +49,14 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     localStorage.setItem('theme', 'light');
 }
 ```
-- Evento de cambio schema
+## Evento de cambio schema
 ```js
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
   event.matches ? enableDarkMode() : disableDarkMode();
 });
 ```
 
-# Con Javascript manualmente 
+# Opción 3 Con Javascript manualmente por boton.
 
 Se puede hacer agregando una clase al body .dark , .light lo guardamos en el localStorage tambien. 
 
@@ -72,6 +75,17 @@ const disableDarkMode = () => {
   localStorage.setItem('theme', 'light');
 }
 
+```
+## Evento botón 
+```js
+// btn btn-theme
+const btnTheme = document.querySelector('#btn-theme');
+
+btnTheme.addEventListener('click', () => {
+  // 1. Check if dark mode is enabled
+  localStorage.getItem('theme') === 'dark' ? disableDarkMode() : enableDarkMode();
+
+})
 ```
 
 > Nota hay una mejor solución para no duplicar tanto las variables de css y las clases. Que es controlando desde JS. Lo vemos en el proximo branch.
@@ -155,3 +169,7 @@ const disableDarkMode = () => {
 ```
 
 > Nota final: Uds podrian agregar mas themas de colores o dejar que el cliente seleciones los colores y los guarde en el localstorage o en la base de datos. 
+
+<hr>
+
+> Cada punto esta un branch distinto. 
